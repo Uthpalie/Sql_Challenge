@@ -55,7 +55,7 @@ LEFT JOIN employees ON
 
 
 
---HELP--Q4: List the department number for each employee along with that employee’s employee number, last name, first name, and department name.
+--Q4: List the department number for each employee along with that employee’s employee number, last name, first name, and department name.
 
 CREATE VIEW employee_deptno AS
 SELECT 
@@ -117,7 +117,8 @@ WHERE dept_name = 'Sales' OR dept_name = 'Development';
 
 SELECT last_name, COUNT(last_name) AS Employees_Lastname_Counts
 FROM employees
-GROUP BY last_name
+GROUP BY last_name 
+ORDER BY Employees_Lastname_Counts DESC
 
 
 

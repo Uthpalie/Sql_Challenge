@@ -14,7 +14,8 @@ CREATE TABLE employees(
 	first_name VARCHAR(30),
 	last_name VARCHAR(30),
 	sex VARCHAR(1),
-	hire_date VARCHAR(10)
+	hire_date VARCHAR(10),
+	FOREIGN KEY (emp_title_id) REFERENCES titles(title_id)
 );
 
 SELECT *
@@ -45,6 +46,7 @@ FROM dept_manager
 CREATE TABLE salaries(
 	emp_no VARCHAR(6) NOT NULL PRIMARY KEY,
 	salary INT(10)
+	FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
 
 SELECT *
